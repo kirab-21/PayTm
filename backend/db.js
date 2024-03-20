@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 mongoose.connect('mongodb://localhost:27017/paytmdb');
@@ -24,7 +24,7 @@ const userSchema = new Schema ({
         required: true,
     },
 
-    firstName: {
+    lastName: {
         type: String,
         required: true,
     }
