@@ -6,10 +6,8 @@ import {
 
 import { Signup } from './pages/Signup';
 import { Signin } from './pages/Signin';
-// import { Dashboard } from './pages/Dashboard';
-// import { SendAmount } from './pages/SendAmount';
-
-
+import { Dashboard } from './pages/Dashboard';
+import { SendAmount } from './pages/SendAmount';
 
 function App() {
 
@@ -19,8 +17,8 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/signin" element={<Signin/>}></Route>
-          {/* <Route path="/dashboard" element={<Dashboard/>}></Route> */}
-          {/* <Route path="/send" element={<SendAmount/>}></Route> */}
+          <Route path="/dashboard" element={<Dashboard/>}></Route>
+          <Route path="/send" element={<SendAmount/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const Signup = () => {
     const [firstName, setFirstName] = useState("");
-    const [lastName, setlastName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
 
@@ -46,7 +46,7 @@ export const Signup = () => {
                             navigate("/dashboard")
                         }} label={"Sign up"}/> 
                     </div>
-                    <Warning label={"Already have an account?"} buttonText={"Sign In"} to={"./signin"}/>
+                    <Warning label={"Already have an account?"} buttonText={"Sign In"} to={"/signin"}/>
                 </div>
             </div>
          </div>
