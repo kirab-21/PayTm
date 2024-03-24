@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 export const Signup = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [userName, setUserName] = useState("");
+    const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ export const Signup = () => {
                         setLastName(e.target.value);
                     }} placeholder="Enter Last Name" label={"Last Name"} />
                     <InputBox onChange={(e) =>{
-                        setUserName(e.target.value);
+                        setUsername(e.target.value);
                     }} placeholder="Enter your Email" label={"Email"} />
                     <InputBox onChange={(e) =>{
                         setPassword(e.target.value);
@@ -37,7 +37,7 @@ export const Signup = () => {
                     <div className='pt-4'>
                         <Button onClick={async () => {
                             const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
-                                userName,
+                                username, // error
                                 firstName,
                                 lastName,
                                 password
