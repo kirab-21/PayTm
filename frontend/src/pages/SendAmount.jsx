@@ -40,12 +40,16 @@ export const SendAmount = () => {
                         <button onClick={() => {
                             axios.post("http://localhost:3000/api/v1/account/transfer", {
                                 to: id,
-                                amount
+                                amount: amount
                             } ,{
                                 headers: {
                                     Authorization: "Bearer " +localStorage.getItem("token")
                                 }
-                            })
+                            }).then(response => {
+                                console.log(response.data); // Handle success response
+                            }).catch(error => {
+                                console.error(error); // Handle error
+                            });
                         }} className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-blue-500 text-white">
                             Initiate Transfer
                         </button>
